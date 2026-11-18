@@ -1,103 +1,210 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vtricks Technologies Bengaluru</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #f0f4ff, #dfe9f3);
+            background: #f0f4ff;
             color: #333;
-            text-align: center;
         }
+
         header {
             background: #0a3d62;
-            padding: 20px 0;
             color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
+
         header h1 {
             margin: 0;
-            font-size: 42px;
-            letter-spacing: 1px;
+            font-size: 28px;
         }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #82ccdd;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 85px 20px;
+            background: linear-gradient(135deg, #0a3d62, #3c6382);
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
         .container {
-            max-width: 900px;
-            margin: 80px auto;
+            max-width: 1100px;
+            margin: 50px auto;
             padding: 20px;
+            text-align: center;
         }
-        h2 {
-            font-size: 32px;
-            color: #0a3d62;
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
-        p {
-            font-size: 20px;
-            line-height: 1.6;
-            color: #444;
-        }
+
         .card {
             background: white;
-            margin: 40px auto;
-            padding: 30px;
+            padding: 25px;
             border-radius: 12px;
-            width: 80%;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
+
+        .card h3 {
+            color: #0a3d62;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .contact {
+            background: #dfe9f3;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contact a {
+            display: inline-block;
+            background: #0a3d62;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
         footer {
             background: #0a3d62;
             color: white;
-            padding: 15px 0;
-            margin-top: 80px;
+            text-align: center;
+            padding: 18px;
         }
-        footer p {
-            margin: 0;
-            font-size: 14px;
-            opacity: 0.8;
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
         <h1>Vtricks Technologies</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <div class="container">
-        <h2>Welcome to SJBIT</h2>
+    <section class="hero" id="home">
+        <h2>Welcome to Vtricks Technologies</h2>
         <p>
-            We are a leading provider of Cloud, DevOps, and Software Engineering solutions.
-            Our mission is to help businesses evolve through modern technology,
-            automation, and scalable architectures.
+            Empowering businesses through Cloud Computing,
+            DevOps and Modern Software Engineering.
         </p>
+    </section>
 
-        <div class="card">
-            <h2>Our Services</h2>
-            <p>
-                ✔ Cloud Architecture (AWS, Azure, GCP)<br>
-                ✔ DevOps Engineering & CI/CD Automation<br>
-                ✔ Modern Web & Mobile App Development<br>
-                ✔ Infrastructure as Code (Terraform, CloudFormation)<br>
-                ✔ Containerization & Orchestration (Docker, Kubernetes)<br>
-                ✔ Monitoring, Logging & Security Integration
-            </p>
-        </div>
+    <section class="container" id="about">
+        <h2>About Us</h2>
+        <p>
+            Vtricks Technologies focuses on delivering innovative
+            technology solutions through automation, cloud platforms
+            and modern software development practices.
+        </p>
+    </section>
 
-        <div class="card">
-            <h2>Why Choose Us?</h2>
-            <p>
-                We believe in quality, innovation, and results-driven delivery.
-                With hands-on expertise and a strong engineering mindset,
-                Vtricks Technologies ensures continuity, reliability,
-                and fast deployments for your applications.
-            </p>
+    <section class="container" id="services">
+        <h2>Our Services</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>Cloud Computing</h3>
+                <p>AWS, Microsoft Azure and Google Cloud Platform solutions.</p>
+            </div>
+
+            <div class="card">
+                <h3>DevOps Engineering</h3>
+                <p>CI/CD pipelines, automation and deployment management.</p>
+            </div>
+
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Modern, responsive and scalable web applications.</p>
+            </div>
+
+            <div class="card">
+                <h3>Docker & Kubernetes</h3>
+                <p>Containerization and application orchestration.</p>
+            </div>
+
+            <div class="card">
+                <h3>Infrastructure as Code</h3>
+                <p>Infrastructure automation using Terraform.</p>
+            </div>
+
+            <div class="card">
+                <h3>Monitoring & Security</h3>
+                <p>Application monitoring, logging and security integration.</p>
+            </div>
+
         </div>
-    </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Let's build something innovative together!</p>
+        <a href="mailto:info@example.com">Get in Touch</a>
+    </section>
 
     <footer>
-        <p>© 2025 Vtricks Technologies. All rights reserved.</p>
+        <p>© 2026 Vtricks Technologies. All rights reserved.</p>
     </footer>
 
 </body>
